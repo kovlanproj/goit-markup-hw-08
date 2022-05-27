@@ -1,0 +1,30 @@
+.social-links {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.social-links__item {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+
+    color: $socIconColor;
+    background-color: $bgColor;
+
+    
+    @include animation2(background-color, color);
+    // @include animation(color, 3000ms);
+
+&:hover, &:focus {
+    background-color: $accentColor;
+        color: $bgColor;
+}
+}
+
+.social-links__icon {
+    fill: currentColor;
+}

@@ -1,0 +1,119 @@
+.footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: $heroColor;
+}
+
+.footer__title {
+    margin-bottom: 20px;
+
+    color: $bgColor;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+}
+
+.footer-items {
+    display: flex;
+}
+
+.footer__logo {
+    display: block;
+    margin-bottom: 20px;
+    
+    color: $bgColor;
+}
+
+.footer__adress {
+    margin-bottom: 9px;
+font-style: normal;
+
+.footer-form__input {
+	height: 50px;
+	min-width: 358px;
+	margin-right: 12px;
+	padding: 15px 16px;
+
+	font-size: 16px;
+	line-height: 1.25;
+
+	background-color: var(--hero-color);
+	color: var(--footer-contacts-color);
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+	border-radius: 4px;
+}
+    color: $bgColor;
+}
+
+.footer__contacts {
+    display: block;
+    color: $footerAdressColor;
+    font-style: normal;
+  
+    @include animation(color);
+   
+    &:hover, &:focus {
+        color: $accentColor;
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 9px;
+    }
+}
+
+.footer__social-links {
+    margin-left: 70px;
+    padding-top: 12px;
+    width: 206px;
+}
+
+.footer__social-item {
+    color: $bgColor;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer-form {
+    margin-left: 93px;
+    padding-top: 12px;
+}
+
+.footer-form__input {
+    height: 50px;
+    min-width: 358px;
+    margin-right: 12px;
+    padding: 15px 16px;
+
+    font-size: 16px;
+    line-height: 1.25;
+
+    background-color: $heroColor;
+    color: $footerAdressColor;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+
+    &::placeholder {
+            color: $footerAdressColor;
+        }
+
+    &:focus {
+            border-color: $accentColor;
+            outline: none;
+    
+            @include animation(border-color);
+            
+        }
+}
+
+.footer-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    // padding-left: 29px;
+}
+
+.footer-button__icon {
+    margin-left: 10px;
+}

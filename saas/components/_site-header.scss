@@ -1,0 +1,254 @@
+.header {
+	width: 100%;
+	height: 100%;
+	border-bottom: 1px solid $borderColor;
+}
+
+.header-nav {
+	height: 60px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	overflow-y: scroll;
+	@include respond-to("medium") {
+		height: 80px;
+	}
+}
+
+.header-nav.is-open {
+	@media screen and (max-width: 767px) {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		align-items: flex-start;
+		z-index: 999;
+
+		background-color: $bgColor;
+
+		& .menu-button {
+			position: absolute;
+			top: 21px;
+			right: 30px;
+		}
+
+		.menu-container {
+			display: block;
+			position: relative;
+
+			height: 100%;
+			//margin-left: auto;
+			margin-right: auto;
+			display: flex;
+			flex-direction: column;
+			outline: 1px solid teal;
+		}
+	}
+}
+
+.menu-container {
+	padding: 48px 25px;
+
+	@media screen and (max-width: 767px) {
+		display: none;
+	}
+
+	@include respond-to("medium") {
+		display: flex;
+	}
+}
+
+.site-nav {
+	@include respond-to("medium") {
+		// display: flex;
+		// align-items: center;
+		.current::after {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 4px;
+			border-radius: 2px;
+			background-color: $accentColor;
+		}
+
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 1.14;
+		letter-spacing: 0.02em;
+	}
+	margin-bottom: auto;
+}
+
+.site-nav__list {
+	@include respond-to("medium") {
+		display: flex;
+		margin-left: 93px;
+	}
+	// @media (max-width: 768px) {
+	// 	display: none;
+	// }
+}
+
+.site-nav__item {
+	@media screen and (max-width: 767px) {
+		&:not(:first-child) {
+			margin-top: 32px;
+		}
+	}
+
+	@include respond-to("medium") {
+		position: relative;
+
+		&:not(:first-child) {
+			margin-left: 50px;
+		}
+	}
+}
+
+.site-nav__link {
+	@media screen and (max-width: 767px) {
+		font-weight: 500;
+		font-size: 40px;
+		line-height: 1.18;
+		letter-spacing: 0.02em;
+		&.current {
+			color: $accentColor;
+		}
+	}
+
+	color: $titleColor;
+
+	@include respond-to("medium") {
+		display: block;
+		padding-top: 32px;
+		padding-bottom: 32px;
+	}
+
+	@include animation(color);
+
+	&:hover,
+	&:focus {
+		color: $accentColor;
+	}
+}
+
+.header-contacts {
+	@media screen and (max-width: 767px) {
+		margin-right: auto;
+		display: flex;
+		flex-direction: column-reverse;
+
+		&--tel {
+			color: $accentColor;
+
+			font-size: 34px;
+			line-height: 1.18;
+			letter-spacing: 0.02em;
+			margin-bottom: 32px;
+		}
+
+		&--email {
+			color: $textColor;
+			font-size: 24px;
+			line-height: 1.17;
+			letter-spacing: 0.02em;
+		}
+	}
+
+	@include respond-to("medium") {
+		display: flex;
+		margin-left: auto;
+	}
+}
+
+.header-contacts__link {
+	display: inline-flex;
+	align-items: center;
+
+	font-weight: 500;
+
+	@include animation(color);
+
+	@include respond-to("medium") {
+		color: $textColor;
+	}
+	&:hover,
+	&:focus {
+		color: $accentColor;
+	}
+}
+
+.header-contacts__item {
+	@media screen and (max-width: 767px) {
+		&:not(:first-child) {
+			margin-top: 32px;
+		}
+	}
+	@include respond-to("medium") {
+		margin-left: 50px;
+	}
+}
+
+.header-contacts__icon {
+	@media screen and (max-width: 767px) {
+		display: none;
+	}
+	margin-right: 10px;
+	fill: currentColor;
+}
+
+.contacts-soclink__list {
+	@include respond-to("medium") {
+		display: none;
+	}
+
+	display: flex;
+	margin-top: 64px;
+}
+
+.contacts-soclink__item {
+	&:not(:last-child) {
+		padding-right: 10px;
+		border-right: 1px solid rgba(33, 33, 33, 0.2);
+	}
+	&:not(:first-child) {
+		padding-left: 10px;
+		border-left: 1px solid rgba(33, 33, 33, 0.2);
+	}
+}
+
+.soclink {
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 1.22;
+	letter-spacing: 0.02em;
+	color: $accentColor;
+}
+
+.menu-button {
+	display: flex;
+	margin-left: auto;
+	margin: 0;
+	padding: 0;
+	border: none;
+	background-color: transparent;
+
+	@include respond-to("medium") {
+		display: none;
+	}
+}
+
+.menu-button .icon-close {
+	display: none;
+}
+
+.menu-button.is-open .icon-close {
+	display: block;
+}
+
+.menu-button.is-open .icon-menu {
+	display: none;
+}

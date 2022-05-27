@@ -1,0 +1,35 @@
+.features-list {
+    display: flex;
+}
+
+.features-list__item {
+    width: 270px;
+
+    &:not(:first-child) {
+            margin-left: 30px;
+        }
+}
+
+.features-list__thumb {
+
+    @extend %flex-centered;
+   
+    width: 270px;
+    height: 120px;
+    margin-bottom: 30px;
+
+    background-color: $secondaryBgColor;
+    border-radius: 4px;
+}
+
+.features-list__title {
+    margin-bottom: 10px;
+    
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    color: $titleColor;
+}

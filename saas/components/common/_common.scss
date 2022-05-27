@@ -1,0 +1,51 @@
+body {
+	background-color: $bgColor;
+	color: $textColor;
+
+	font-family: $fontFamily;
+	font-size: $mainFontSize;
+	line-height: $mainLineHeight;
+	letter-spacing: $letterSpacing;
+
+	&.modal-open {
+		overflow: hidden;
+	}
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+.list {
+	list-style: none;
+}
+
+.link {
+	text-decoration: none;
+}
+
+.section__title {
+	margin-bottom: 30px;
+
+	color: $titleColor;
+
+	font-weight: 700;
+	font-size: 28px;
+	line-height: 1.18;
+	text-align: center;
+	// letter-spacing: 0.03em;
+
+	@include respond-to("large") {
+		margin-bottom: 50px;
+		font-size: 36px;
+		line-height: 1.17;
+	}
+}

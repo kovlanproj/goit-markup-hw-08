@@ -1,0 +1,24 @@
+// Site colors
+$bgColor: #ffffff;
+$secondaryBgColor: #F5F4FA;
+$accentColor: #2196F3;
+$heroColor: #2F303A;
+$textColor: #757575;
+$titleColor: #212121;
+$logoColor:#000000;
+$footerAdressColor: rgba(255, 255, 255, 0.6);
+$borderColor: #ececec;
+$labelBg: rgba(47, 48, 58, 0.8);
+$socIconColor: #afb1b8;
+
+//Fonts
+$fontFamily: "Roboto", sans-serif;
+$mainFontSize: 14px;
+$mainLineHeight: 1.71;
+$letterSpacing: 0.03em;
+
+// Screen
+$breakpoints: (
+    'small': 480px,
+    'medium': 768px,
+    'large': 1200px) !default;

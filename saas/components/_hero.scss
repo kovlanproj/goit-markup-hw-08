@@ -1,0 +1,43 @@
+.hero {
+    height: 400px;
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 270px;
+
+  
+    display: flex;
+    align-items: center;
+
+    text-align: center;
+
+    background-color: $heroColor;
+    // background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero.jpg");
+    // background-repeat: no-repeat;
+    // background-position: center;
+
+    @include respond-to('large') {
+    height: 600px;
+    
+    }
+}
+
+.hero-title {
+    margin-bottom: 30px;
+
+    color: $bgColor;
+    font-weight: 900;
+    font-size: 26px;
+    line-height: 1.62;
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+
+    @include respond-to('large') {
+        color: $bgColor;
+        font-weight: 900;
+        font-size: 44px;
+        line-height: 1.36;
+        
+        }
+}
