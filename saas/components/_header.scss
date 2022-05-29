@@ -46,7 +46,9 @@
 		.menu-container {
 			//display: block;
 			height: 100%;
-			padding: 48px 25px;
+			// width: 100%;
+			padding: 25px 25px 25px 48px;
+			padding-right: 25px;
 			display: flex;
 			flex-direction: column;
 			margin-left: auto;

@@ -1,43 +1,66 @@
 .hero {
-    height: 400px;
-    max-width: 1600px;
-    margin-left: auto;
-    margin-right: auto;
-    min-width: 270px;
+	height: 400px;
+	max-width: 1600px;
+	margin-left: auto;
+	margin-right: auto;
+	min-width: 270px;
+	text-align: center;
+	display: flex;
+	align-items: center;
 
-  
-    display: flex;
-    align-items: center;
+	background-color: $heroColor;
 
-    text-align: center;
+	@media screen and (max-width: 480px) {
+		background-size: cover;
+		background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+			url("../images/hero-small.jpg");
+		background-repeat: no-repeat;
+		background-position: center;
+		@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+			background-image: url("../images/hero-small@2x.jpg");
+		}
+	}
+	@media screen and (min-width: 480px) {
+		background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+			url("../images/hero-medium.jpg");
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+			background-image: url("../images/hero-medium@2x.jpg");
+		}
+	}
+	@media screen and (min-width: 768px) {
+		background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+			url("../images/hero-large.jpg");
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+			background-image: url("../images/hero-large@2x.jpg");
+		}
+	}
 
-    background-color: $heroColor;
-    // background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero.jpg");
-    // background-repeat: no-repeat;
-    // background-position: center;
-
-    @include respond-to('large') {
-    height: 600px;
-    
-    }
+	@include respond-to("large") {
+		height: 600px;
+	}
 }
 
 .hero-title {
-    margin-bottom: 30px;
+	margin-bottom: 30px;
 
-    color: $bgColor;
-    font-weight: 900;
-    font-size: 26px;
-    line-height: 1.62;
-    text-align: center;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
+	color: $bgColor;
+	font-weight: 900;
+	font-size: 26px;
+	line-height: 1.62;
+	text-align: center;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
 
-    @include respond-to('large') {
-        color: $bgColor;
-        font-weight: 900;
-        font-size: 44px;
-        line-height: 1.36;
-        
-        }
+	@include respond-to("large") {
+		color: $bgColor;
+		font-weight: 900;
+		font-size: 44px;
+		line-height: 1.36;
+	}
 }
