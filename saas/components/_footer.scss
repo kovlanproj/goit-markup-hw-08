@@ -5,7 +5,10 @@
 }
 
 .adress__block {
-	text-align: center;
+	@media screen and (max-width: 1200px) {
+		text-align: center;
+	}
+
 	@media screen and (max-width: 767px) {
 		margin-bottom: 60px;
 	}

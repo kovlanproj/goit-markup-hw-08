@@ -39,6 +39,9 @@
 }
 
 .features-list__title {
+	@media screen and (max-width: 767px) {
+		text-align: center;
+	}
 	margin-bottom: 10px;
 
 	font-weight: 700;
